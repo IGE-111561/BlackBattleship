@@ -39,4 +39,16 @@ public class BattleshipHomePageTest {
         assertTrue(homePage.isPlayWithFriendVisible(),
                 "O botão 'Play with a friend' deve estar visível");
     }
+
+    // US02 - Aceitar cookies do site
+    @Test
+    public void aceitarCookies() {
+        assertTrue(homePage.isCookieBannerVisible(),
+                "O banner de cookies deve aparecer na primeira visita");
+
+        homePage.acceptCookies();
+
+        assertFalse(homePage.isCookieBannerVisible(),
+                "O banner de cookies deve desaparecer após aceitar");
+    }
 }

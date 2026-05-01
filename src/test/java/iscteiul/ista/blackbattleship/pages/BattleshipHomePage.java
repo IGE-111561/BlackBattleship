@@ -26,6 +26,7 @@ public class BattleshipHomePage {
 
     @FindBy(xpath = "//span[normalize-space()='Play with a friend']")
     private WebElement playWithFriendButton;
+    private final By cookieDialog = By.cssSelector("div.fc-dialog, div.fc-consent-root");
 
     private final By cookieAcceptButton = By.cssSelector("button.fc-cta-consent");
 
@@ -59,5 +60,17 @@ public class BattleshipHomePage {
 
     public boolean isPlayWithFriendVisible() {
         return playWithFriendButton.isDisplayed();
+    }
+
+    public void acceptCookies() {
+        wait.until(ExpectedConditions.elementToBeClickable(cookieAcceptButton)).click();
+    }
+
+    public boolean isCookieBannerVisible() {
+        try {
+            return driver.findElement(cookieDialog).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 }
