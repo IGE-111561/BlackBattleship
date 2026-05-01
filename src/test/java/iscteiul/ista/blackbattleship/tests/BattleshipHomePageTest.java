@@ -51,4 +51,19 @@ public class BattleshipHomePageTest {
         assertFalse(homePage.isCookieBannerVisible(),
                 "O banner de cookies deve desaparecer após aceitar");
     }
+
+    // US03 - Iniciar partida contra o robot
+    @Test
+    public void iniciarPartidaContraRobot() {
+        homePage.acceptCookiesIfPresent();
+        homePage.clickPlayVsRobot();
+
+        assertTrue(homePage.isNicknameDialogVisible(),
+                "Ao clicar 'Play vs robot' deve aparecer o pedido de nickname");
+
+        homePage.submitNickname("TesteBot" + System.currentTimeMillis() % 10000);
+
+        assertTrue(homePage.isPlayingAgainstRobot(),
+                "Após submeter nickname, o jogador deve estar na sala de jogo contra 'Paper Man'");
+    }
 }

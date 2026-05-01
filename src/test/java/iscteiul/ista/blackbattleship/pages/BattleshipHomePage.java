@@ -26,9 +26,18 @@ public class BattleshipHomePage {
 
     @FindBy(xpath = "//span[normalize-space()='Play with a friend']")
     private WebElement playWithFriendButton;
-    private final By cookieDialog = By.cssSelector("div.fc-dialog, div.fc-consent-root");
+
+    @FindBy(xpath = "//h2[normalize-space()='Who are you?']")
+    private WebElement nicknameDialogTitle;
+
+    @FindBy(css = "input[formcontrolname='username']")
+    private WebElement nicknameInput;
+
+    @FindBy(css = "footer button[type='submit']")
+    private WebElement nicknameContinueButton;
 
     private final By cookieAcceptButton = By.cssSelector("button.fc-cta-consent");
+    private final By cookieDialog = By.cssSelector("div.fc-dialog, div.fc-consent-root");
 
     public BattleshipHomePage(WebDriver driver) {
         this.driver = driver;
@@ -49,6 +58,18 @@ public class BattleshipHomePage {
         }
     }
 
+    public void acceptCookies() {
+        wait.until(ExpectedConditions.elementToBeClickable(cookieAcceptButton)).click();
+    }
+
+    public boolean isCookieBannerVisible() {
+        try {
+            return driver.findElement(cookieDialog).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public String getPageTitleText() {
         wait.until(ExpectedConditions.visibilityOf(pageTitle));
         return pageTitle.getText();
@@ -62,14 +83,32 @@ public class BattleshipHomePage {
         return playWithFriendButton.isDisplayed();
     }
 
-    public void acceptCookies() {
-        wait.until(ExpectedConditions.elementToBeClickable(cookieAcceptButton)).click();
+    public void clickPlayVsRobot() {
+        wait.until(ExpectedConditions.elementToBeClickable(playVsRobotButton)).click();
     }
 
-    public boolean isCookieBannerVisible() {
+    public boolean isNicknameDialogVisible() {
         try {
-            return driver.findElement(cookieDialog).isDisplayed();
-        } catch (Exception e) {
+            wait.until(ExpectedConditions.visibilityOf(nicknameDialogTitle));
+            return nicknameDialogTitle.isDisplayed() && nicknameInput.isDisplayed();
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
+    public void submitNickname(String nickname) {
+        wait.until(ExpectedConditions.visibilityOf(nicknameInput));
+        nicknameInput.sendKeys(nickname);
+        wait.until(ExpectedConditions.elementToBeClickable(nicknameContinueButton)).click();
+    }
+
+    public boolean isPlayingAgainstRobot() {
+        try {
+            WebElement opponent = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//span[normalize-space()='Paper Man']")
+            ));
+            return opponent.isDisplayed();
+        } catch (TimeoutException e) {
             return false;
         }
     }
