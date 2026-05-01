@@ -87,6 +87,10 @@ public class BattleshipHomePage {
         wait.until(ExpectedConditions.elementToBeClickable(playVsRobotButton)).click();
     }
 
+    public void clickPlayWithFriend() {
+        wait.until(ExpectedConditions.elementToBeClickable(playWithFriendButton)).click();
+    }
+
     public boolean isNicknameDialogVisible() {
         try {
             wait.until(ExpectedConditions.visibilityOf(nicknameDialogTitle));
@@ -110,6 +114,28 @@ public class BattleshipHomePage {
             return opponent.isDisplayed();
         } catch (TimeoutException e) {
             return false;
+        }
+    }
+
+    public boolean isShareLinkPageVisible() {
+        try {
+            WebElement title = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//*[normalize-space()='Share this link with a friend']")
+            ));
+            return title.isDisplayed();
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
+    public String getShareableLink() {
+        try {
+            WebElement linkElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector("app-copy-text span")
+            ));
+            return linkElement.getText();
+        } catch (TimeoutException e) {
+            return "";
         }
     }
 }
