@@ -207,4 +207,32 @@ public class BattleshipHomePage {
             return false;
         }
     }
+
+    public void openPrivacyPolicy() {
+        driver.get("https://papergames.io/en/blog/privacy-policy");
+    }
+
+    public void openTermsConditions() {
+        driver.get("https://papergames.io/en/blog/terms-conditions");
+    }
+
+    public boolean isPrivacyPolicyPageVisible() {
+        try {
+            WebElement body = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
+            String text = body.getText().toLowerCase();
+            return text.contains("privacy") || text.contains("policy");
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
+    public boolean isTermsConditionsPageVisible() {
+        try {
+            WebElement body = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
+            String text = body.getText().toLowerCase();
+            return text.contains("terms") || text.contains("conditions");
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
 }

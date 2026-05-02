@@ -138,4 +138,22 @@ public class BattleshipHomePageTest {
                 "A página de changelog deve estar visível"
         );
     }
+
+    // US20 - Aceder à Política de Privacidade e Termos & Condições
+    @Test
+    public void acederPoliticaPrivacidadeETermosCondicoes() {
+        homePage.openPrivacyPolicy();
+
+        assertTrue(
+                homePage.isPrivacyPolicyPageVisible(),
+                "A página de Política de Privacidade deve estar visível"
+        );
+
+        homePage.openTermsConditions();
+
+        assertTrue(
+                homePage.isTermsConditionsPageVisible(),
+                "A página de Termos & Condições deve estar visível"
+        );
+    }
 }
