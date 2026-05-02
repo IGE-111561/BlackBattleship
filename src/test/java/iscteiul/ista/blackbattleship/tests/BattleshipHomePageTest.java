@@ -67,6 +67,22 @@ public class BattleshipHomePageTest {
                 "Após submeter nickname, o jogador deve estar na sala de jogo contra 'Paper Man'");
     }
 
+    // US04 - Posicionar navios no tabuleiro
+    @Test
+    public void posicionarNaviosNoTabuleiro() {
+        homePage.acceptCookiesIfPresent();
+        homePage.clickPlayVsRobot();
+
+        if (homePage.isNicknameDialogVisible()) {
+            homePage.submitNickname("TesteNavios" + System.currentTimeMillis() % 10000);
+        }
+
+        assertTrue(
+                homePage.isGameBoardVisible() || homePage.hasGameCellsOrBoardElements(),
+                "Após iniciar a partida, devem existir elementos visíveis do tabuleiro/navios"
+        );
+    }
+
     // US07 - Jogar contra um amigo via link partilhável
     @Test
     public void jogarContraAmigoComLinkPartilhavel() {

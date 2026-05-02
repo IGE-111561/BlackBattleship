@@ -138,4 +138,31 @@ public class BattleshipHomePage {
             return "";
         }
     }
+
+    public boolean isGameBoardVisible() {
+        try {
+            WebElement board = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.cssSelector(
+                            "app-game, app-battleship, .board, .battlefield, .game, table, [class*='board'], [class*='grid'], [class*='cell']"
+                    )
+            ));
+            return board.isDisplayed();
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
+    public boolean hasGameCellsOrBoardElements() {
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(
+                    By.cssSelector("[class*='cell'], [class*='tile'], [class*='square'], [class*='ship'], [class*='board'], [class*='grid']")
+            ));
+
+            return !driver.findElements(
+                    By.cssSelector("[class*='cell'], [class*='tile'], [class*='square'], [class*='ship'], [class*='board'], [class*='grid']")
+            ).isEmpty();
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
 }
