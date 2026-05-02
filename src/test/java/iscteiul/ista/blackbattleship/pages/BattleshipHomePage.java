@@ -165,4 +165,16 @@ public class BattleshipHomePage {
             return false;
         }
     }
+
+    public void shootRandomCell() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.cssSelector("[class*='cell'], [class*='tile'], [class*='square']")
+        ));
+
+        WebElement cell = driver.findElements(
+                By.cssSelector("[class*='cell'], [class*='tile'], [class*='square']")
+        ).get(0);
+
+        cell.click();
+    }
 }

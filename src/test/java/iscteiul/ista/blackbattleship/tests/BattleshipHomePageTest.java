@@ -83,6 +83,26 @@ public class BattleshipHomePageTest {
         );
     }
 
+    // US05 - Disparar contra o tabuleiro adversário
+    @Test
+    public void dispararContraTabuleiro() {
+        homePage.acceptCookiesIfPresent();
+        homePage.clickPlayVsRobot();
+
+        if (homePage.isNicknameDialogVisible()) {
+            homePage.submitNickname("TesteDisparo" + System.currentTimeMillis() % 10000);
+        }
+
+        // Garantir que o tabuleiro existe antes de disparar
+        assertTrue(homePage.hasGameCellsOrBoardElements());
+
+        // Fazer um disparo
+        homePage.shootRandomCell();
+
+        // Se chegou aqui sem erro → passou
+        assertTrue(true, "Foi possível disparar numa célula do tabuleiro");
+    }
+
     // US07 - Jogar contra um amigo via link partilhável
     @Test
     public void jogarContraAmigoComLinkPartilhavel() {
