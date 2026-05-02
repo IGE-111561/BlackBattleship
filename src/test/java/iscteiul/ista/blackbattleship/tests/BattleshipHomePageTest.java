@@ -121,4 +121,21 @@ public class BattleshipHomePageTest {
         assertTrue(shareableLink.startsWith("https://papergames.io/en/r/"),
                 "O link partilhável deve estar visível e começar por 'https://papergames.io/en/r/'. Link obtido: " + shareableLink);
     }
+
+    // US19 - Consultar guias e changelog
+    @Test
+    public void consultarGuiasEChangelog() {
+
+        homePage.openGameGuides();
+        assertTrue(
+                homePage.isGuidesPageVisible(),
+                "A página de guias deve conter informação sobre o jogo"
+        );
+
+        homePage.openChangelog();
+        assertTrue(
+                homePage.isChangelogPageVisible(),
+                "A página de changelog deve estar visível"
+        );
+    }
 }

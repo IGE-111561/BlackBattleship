@@ -177,4 +177,34 @@ public class BattleshipHomePage {
 
         cell.click();
     }
+
+    public void openGameGuides() {
+        driver.get("https://papergames.io/docs/game-guides/");
+    }
+
+    public void openChangelog() {
+        driver.get("https://papergames.io/en/changelog");
+    }
+
+    public boolean isGuidesPageVisible() {
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.tagName("body")
+            ));
+            return element.getText().toLowerCase().contains("battleship");
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
+
+    public boolean isChangelogPageVisible() {
+        try {
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.tagName("body")
+            ));
+            return element.getText().toLowerCase().contains("changelog");
+        } catch (TimeoutException e) {
+            return false;
+        }
+    }
 }
