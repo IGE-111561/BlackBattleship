@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.Duration;
 
@@ -23,6 +25,8 @@ public class MainPageTest {
         driver.get("https://www.jetbrains.com/");
 
         mainPage = new MainPage(driver);
+        //Aceitar os cookies, implementado em MainPage.java
+        mainPage.acceptCookiesIfPresent();
     }
 
     @AfterEach
@@ -34,13 +38,17 @@ public class MainPageTest {
     public void search() {
         mainPage.searchButton.click();
 
-        WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-input']"));
+        WebElement searchField = driver.findElement(By.cssSelector("input[data-test-id='search-input']"));
         searchField.sendKeys("Selenium");
 
-        WebElement submitButton = driver.findElement(By.cssSelector("button[data-test='full-search-button']"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        //Tenho que esperar que o botão de full serach apareça para poder clicá-lo, ele dá load conjuntamente com os serach results
+        WebElement submitButton = wait.until(
+                ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-test='full-search-button']"))
+        );
         submitButton.click();
 
-        WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test='search-input']"));
+        WebElement searchPageField = driver.findElement(By.cssSelector("input[data-test-id='search-input']"));
         assertEquals("Selenium", searchPageField.getAttribute("value"));
     }
 
