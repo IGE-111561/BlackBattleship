@@ -190,16 +190,18 @@ Backlog em formato de User Stories Scrum, ordenado por prioridade decrescente. A
 
 ---
 
-## US14 — Criar um torneio privado
+## US14 — Aceder à criação de torneio
 
-**Como** organizador (jogador registado)  
-**Quero** criar um torneio de Batalha Naval em `/en/t/create-tournament`  
-**Para** organizar competições com um grupo definido de jogadores
+**Como** utilizador interessado em organizar competições
+**Quero** aceder à funcionalidade de criação de torneios em /en/t/create-tournament
+**Para** poder organizar competições com um grupo definido de jogadores
 
 **Critérios de aceitação:**
-- A página de criação de torneio permite definir nome, jogo, formato e número de participantes
-- Após criação, o torneio fica acessível em "Os meus torneios" (`/en/t/my-tournaments`)
-- É gerada uma forma de convidar outros jogadores (ex.: link ou código) visível ao organizador
+- O botão "Create tournament" está acessível e visível na navegação do site
+- Ao clicar no botão sem sessão iniciada, o sistema apresenta um diálogo de autenticação com o título "Welcome back!"
+- O diálogo de autenticação disponibiliza o botão "Continue with email" e opções de login social (Google, Facebook, Discord)
+- O diálogo de autenticação pode ser fechado pelo utilizador
+
 
 ---
 
