@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5305","acederACriacaoDeTorneio()","","2026-05-09","passed","2026-05-09","","iscteiul.ista.blackbattleship.tests.tournaments_pricing.TournamentsAndPricingTest","iscteiul.ista.blackbattleship.tests.tournaments_pricing.TournamentsAndPricingTest","acederACriacaoDeTorneio"
+"","4535","subscreverPlusExigeLogin()","","2026-05-09","passed","2026-05-09","","iscteiul.ista.blackbattleship.tests.tournaments_pricing.TournamentsAndPricingTest","iscteiul.ista.blackbattleship.tests.tournaments_pricing.TournamentsAndPricingTest","subscreverPlusExigeLogin"
+"","3896","subscreverGruppoExigeLogin()","","2026-05-09","passed","2026-05-09","","iscteiul.ista.blackbattleship.tests.tournaments_pricing.TournamentsAndPricingTest","iscteiul.ista.blackbattleship.tests.tournaments_pricing.TournamentsAndPricingTest","subscreverGruppoExigeLogin"
