@@ -312,6 +312,11 @@ Backlog em formato de User Stories Scrum, ordenado por prioridade decrescente. A
 ## Execução dos testes iniciais - 123762
 A classe `MainPageTest` foi executada com sucesso na branch `BlackBattleship-123762`.
 
+
+## Execução dos testes iniciais - 93263
+
+A classe `MainPageTest` foi executada com sucesso na branch `BlackBattleship-93263`.
+
 Resultados:
 - search() ✔
 - toolsMenu() ✔

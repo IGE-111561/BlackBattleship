@@ -1,0 +1,141 @@
+{
+  "id": "d8214f68-2d45-4539-830e-2613c3c34209",
+  "version": "2.0",
+  "name": "TestSuite_US21_93263",
+  "url": "https://papergames.io",
+  "tests": [{
+    "id": "d8214f68-2d45-4539-830e-2613c3c34209",
+    "name": "TestSuite_US21_93263",
+    "commands": [{
+      "id": "b0d88b10-3c17-47d6-be8b-cf214196dd2a",
+      "comment": "Abrir a página inicial do papergames.io no locale inglês",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cf2691b-16e0-4ae0-b917-6e2d8e036010",
+      "comment": "Definir o tamanho da janela para desktop (1215x1097)",
+      "command": "setWindowSize",
+      "target": "1215x1097",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09da1fc9-c67a-4c3f-b98b-826ea4bb352c",
+      "comment": "Clicar no badge Google Play para confirmar que o link abre a ficha da app na Google Play Store",
+      "command": "click",
+      "target": "css=app-playstore-badge img",
+      "targets": [
+        ["css=app-playstore-badge img", "css:finder"],
+        ["xpath=//img[@alt='Get it on Playstore']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win7708",
+      "windowTimeout": 2000
+    }, {
+      "id": "84d1a6a3-4293-4ae0-826f-45ec049c40f9",
+      "comment": "Guardar o handle da tab original do papergames.io para poder regressar",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "970b035b-8f14-4e36-9563-0be23bc84d62",
+      "comment": "Mudar o foco para a nova tab aberta com a Google Play Store",
+      "command": "selectWindow",
+      "target": "handle=${win7708}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28b71e88-c0af-4bab-98a5-e8b52c8e4951",
+      "comment": "Dispensar o diálogo de autenticação da Google que aparece na Play Store",
+      "command": "click",
+      "target": "css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb",
+      "targets": [
+        ["css=.VfPpkd-LgbsSe-OWXEXe-k8QpJ > .VfPpkd-RLmnJb", "css:finder"],
+        ["xpath=//button/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a40c93a7-da49-450e-b4ed-731e88aaa043",
+      "comment": "Confirmar que a ficha da app papergames está visível na Google Play Store",
+      "command": "click",
+      "target": "css=.fKz7Od .XAUpld",
+      "targets": [
+        ["css=.fKz7Od .XAUpld", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3972f350-bdda-4e02-b207-41c69ef73622",
+      "comment": "Regressar à tab original do papergames.io",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "955d786e-af30-4791-8dad-835625deac89",
+      "comment": "Passar o rato sobre o menu do utilizador na barra de navegação (interação de navegação)",
+      "command": "mouseOver",
+      "target": "css=.mat-mdc-menu-trigger > .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=.mat-mdc-menu-trigger > .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//span[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aae619b3-66be-473d-b343-0d186165b4f9",
+      "comment": "Retirar o rato do menu do utilizador",
+      "command": "mouseOut",
+      "target": "css=.mat-mdc-menu-trigger > .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=.mat-mdc-menu-trigger > .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//span[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ac529da-9767-43b0-8fa5-f85d087a3f66",
+      "comment": "Clicar no badge App Store para confirmar que o link abre a ficha da app na Apple App Store",
+      "command": "click",
+      "target": "css=app-appstore-badge img",
+      "targets": [
+        ["css=app-appstore-badge img", "css:finder"],
+        ["xpath=//img[@alt='Get it on the AppStore']", "xpath:img"],
+        ["xpath=//app-appstore-badge/a/img", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win1220",
+      "windowTimeout": 2000
+    }, {
+      "id": "5455f530-324a-40eb-a1c5-970d87e6df10",
+      "comment": "Mudar o foco para a nova tab aberta com a Apple App Store",
+      "command": "selectWindow",
+      "target": "handle=${win1220}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70053ffc-54f2-4155-94c0-f4020f07fb3a",
+      "comment": "Confirmar que a ficha da app papergames está visível na App Store com o botão 'View in Mac App Store'",
+      "command": "click",
+      "target": "css=.blue",
+      "targets": [
+        ["css=.blue", "css:finder"],
+        ["xpath=//span/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View in Mac App Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "518137df-a280-44fc-9238-4627b83e2e2d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d8214f68-2d45-4539-830e-2613c3c34209"]
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}

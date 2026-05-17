@@ -9,10 +9,38 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Page Test Class que valida os cenários de teste de caixa-preta da página
+ * inicial do jogo de Batalha Naval em <a href="https://papergames.io/en/battleship">papergames.io</a>.
+ *
+ * <p>Cada método de teste corresponde a uma User Story do Product Backlog:
+ * <ul>
+ *   <li>{@link #acederAPaginaDoJogo()} — US01</li>
+ *   <li>{@link #aceitarCookies()} — US02</li>
+ *   <li>{@link #iniciarPartidaContraRobot()} — US03</li>
+ *   <li>{@link #jogarContraAmigoComLinkPartilhavel()} — US07</li>
+ * </ul>
+ * </p>
+ *
+ * <p>Os testes utilizam JUnit 5 (Jupiter) e o padrão Page Object Model:
+ * todas as interações com a página são delegadas à {@link BattleshipHomePage},
+ * mantendo esta classe focada apenas na lógica de teste e nas asserções.</p>
+ *
+ * @see BattleshipHomePage
+ */
 public class BattleshipHomePageTest {
+
+    /** WebDriver instanciado por cada teste para garantir isolamento. */
     private WebDriver driver;
+
+    /** Page Object da página inicial do jogo de Batalha Naval. */
     private BattleshipHomePage homePage;
 
+    /**
+     * Inicializa o ambiente de teste antes de cada cenário: arranca uma
+     * nova instância do Chrome, maximiza a janela, configura o tempo
+     * de espera implícito e navega para a URL do jogo.
+     */
     @BeforeEach
     public void setUp() {
         driver = new ChromeDriver();
@@ -22,12 +50,22 @@ public class BattleshipHomePageTest {
         homePage.open();
     }
 
+    /**
+     * Termina a sessão do browser após cada teste, libertando recursos.
+     */
     @AfterEach
     public void tearDown() {
         driver.quit();
     }
 
-    // US01 - Aceder à página do jogo de Batalha Naval
+    /**
+     * US01 — Aceder à página do jogo de Batalha Naval.
+     *
+     * <p>Verifica que ao abrir a URL do jogo, o título "Battleship Online"
+     * é apresentado e os botões dos modos de jogo principais
+     * ("Play vs robot" e "Play with a friend") estão visíveis sem
+     * necessidade de autenticação prévia.</p>
+     */
     @Test
     public void acederAPaginaDoJogo() {
         homePage.acceptCookiesIfPresent();
@@ -40,7 +78,13 @@ public class BattleshipHomePageTest {
                 "O botão 'Play with a friend' deve estar visível");
     }
 
-    // US02 - Aceitar cookies do site
+    /**
+     * US02 — Aceitar cookies do site.
+     *
+     * <p>Verifica que na primeira visita à página é apresentado o banner
+     * de cookies e que, após o utilizador aceitar, o banner desaparece
+     * e deixa de bloquear a interação com a página.</p>
+     */
     @Test
     public void aceitarCookies() {
         assertTrue(homePage.isCookieBannerVisible(),
@@ -52,7 +96,14 @@ public class BattleshipHomePageTest {
                 "O banner de cookies deve desaparecer após aceitar");
     }
 
-    // US03 - Iniciar partida contra o robot
+    /**
+     * US03 — Iniciar partida contra o robot.
+     *
+     * <p>Verifica o fluxo: clicar em "Play vs robot" abre o diálogo de
+     * pedido de nickname; após submissão de um nickname válido, o
+     * jogador é redirecionado para a sala de jogo, onde o adversário
+     * "Paper Man" (robot) é apresentado.</p>
+     */
     @Test
     public void iniciarPartidaContraRobot() {
         homePage.acceptCookiesIfPresent();
