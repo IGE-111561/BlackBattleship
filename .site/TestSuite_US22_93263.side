@@ -1,0 +1,176 @@
+{
+  "id": "33dc5fdd-1d91-4b99-808a-7759dcc4b76f",
+  "version": "2.0",
+  "name": "TestSuite_US22_93263.side",
+  "url": "https://papergames.io",
+  "tests": [{
+    "id": "be2d6bdc-1941-4b8e-aaa8-e67a1947c0bb",
+    "name": "TestSuite_US22_93263.side",
+    "commands": [{
+      "id": "0dc4c9f9-037d-44f7-b3c9-56a3b19291d6",
+      "comment": "Abrir a página inicial do papergames.io no locale pt-br",
+      "command": "open",
+      "target": "/pt-br/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fff76446-4a33-40c8-997a-2e2531676e84",
+      "comment": "Definir o tamanho da janela para simular um ecrã de tablet/mobile (599x691)",
+      "command": "setWindowSize",
+      "target": "599x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59b24663-fd8c-434c-9444-dcfbdf0ce6d7",
+      "comment": "Passar o rato sobre o item 'Damas' na grelha de jogos para activar o foco no menu de navegação lateral",
+      "command": "mouseOver",
+      "target": "css=.game-item:nth-child(6) .text-light",
+      "targets": [
+        ["css=.game-item:nth-child(6) .text-light", "css:finder"],
+        ["xpath=//div[6]/a/div/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Damas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b8d8178-c738-4e5c-96df-666d3cae6dfb",
+      "comment": "Clicar no item 'Loja' no menu de navegação lateral para aceder à página da loja",
+      "command": "click",
+      "target": "css=.cdk-focused > .hide-if-collapsed",
+      "targets": [
+        ["css=.cdk-focused > .hide-if-collapsed", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Loja')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9066e7c3-9487-423a-ab84-1240a3a06aeb",
+      "comment": "Clicar na imagem da categoria 'Monstros' para ver os avatares disponíveis para compra",
+      "command": "click",
+      "target": "css=.box-shadow-1:nth-child(2) .w-75",
+      "targets": [
+        ["css=.box-shadow-1:nth-child(2) .w-75", "css:finder"],
+        ["xpath=//img[@alt='Monstros']", "xpath:img"],
+        ["xpath=//div[2]/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "469780b7-03fa-41cd-8558-cfbc9ec655dc",
+      "comment": "Clicar no botão de compra do 10.º produto da listagem de Monstros",
+      "command": "click",
+      "target": "css=.h-100:nth-child(10) .btn",
+      "targets": [
+        ["css=.h-100:nth-child(10) .btn", "css:finder"],
+        ["xpath=//mat-tab-body[@id='mat-tab-group-serverApp0-content-0']/div/div/app-avatar-product[10]/div/app-shop-purchase-product-button/button", "xpath:idRelative"],
+        ["xpath=//app-avatar-product[10]/div/app-shop-purchase-product-button/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4af439c9-dc82-4ece-b81d-371eb5073102",
+      "comment": "Clicar no botão 'Confirmar' no diálogo de confirmação de compra",
+      "command": "click",
+      "target": "css=.btn-secondary:nth-child(2)",
+      "targets": [
+        ["css=.btn-secondary:nth-child(2)", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-confirm-dialog/app-dialog-layout/div/footer/app-juicy-button[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//app-juicy-button[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "83fe034a-f40f-4daa-8c36-bf5a11eb5e42",
+      "comment": "Clicar no toast de notificação para o descartar (aparece porque o utilizador não tem sessão activa)",
+      "command": "click",
+      "target": "css=.ng-trigger",
+      "targets": [
+        ["css=.ng-trigger", "css:finder"],
+        ["xpath=//div[@id='toast-container']/div", "xpath:idRelative"],
+        ["xpath=//body/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "371f3d57-288e-4e02-8e66-9bbe24be7ce0",
+      "comment": "Clicar no link 'Loja' do breadcrumb para regressar à listagem de categorias da loja",
+      "command": "click",
+      "target": "css=.xng-breadcrumb-link",
+      "targets": [
+        ["css=.xng-breadcrumb-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Loja')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/pt-br/shop')])[2]", "xpath:href"],
+        ["xpath=//ol/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39fd42cd-5c4a-4347-a7a8-cb4afc2167ed",
+      "comment": "Clicar em 'Presentes' para abrir o site de merchandising oficial (merch.papergames.io) numa nova tab",
+      "command": "click",
+      "target": "css=.box-shadow-1:nth-child(5) h3",
+      "targets": [
+        ["css=.box-shadow-1:nth-child(5) h3", "css:finder"],
+        ["xpath=//div[5]/a/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Presentes')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4788",
+      "windowTimeout": 2000
+    }, {
+      "id": "92b3951f-f339-48ff-8df9-6c3efdf18417",
+      "comment": "Mudar o foco do WebDriver para a nova tab aberta (merch.papergames.io)",
+      "command": "selectWindow",
+      "target": "handle=${win4788}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f4659d0-371e-47c2-a5f1-ea9906be8137",
+      "comment": "Clicar em 'Shop all' no banner principal do site de merchandising para ver o catálogo completo de produtos físicos",
+      "command": "click",
+      "target": "linkText=Shop all",
+      "targets": [
+        ["linkText=Shop all", "linkText"],
+        ["css=.banner__buttons > .button", "css:finder"],
+        ["xpath=//a[contains(text(),'Shop all')]", "xpath:link"],
+        ["xpath=//div[@id='Slide-template--23645756064083__slideshow-1']/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/collections/all')])[3]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Shop all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c6a74fb-c1a1-4d7e-a960-f9e02e8c73d9",
+      "comment": "Clicar em 'Choose options' num produto do catálogo para ver as opções de tamanho/cor disponíveis",
+      "command": "click",
+      "target": "id=quick-add-template--23645755998547__product-grid9274172703059-submit",
+      "targets": [
+        ["id=quick-add-template--23645755998547__product-grid9274172703059-submit", "id"],
+        ["name=add", "name"],
+        ["css=#quick-add-template--23645755998547__product-grid9274172703059-submit", "css:finder"],
+        ["xpath=//button[@id='quick-add-template--23645755998547__product-grid9274172703059-submit']", "xpath:attributes"],
+        ["xpath=//ul[@id='product-grid']/li/div/div/div[2]/div[2]/modal-opener/button", "xpath:idRelative"],
+        ["xpath=//modal-opener/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Choose options')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc906af7-8e75-4e46-8740-e5dda042f131",
+      "comment": "Clicar no botão Shop Pay para iniciar o processo de checkout acelerado (não finaliza a compra)",
+      "command": "click",
+      "target": "css=shop-pay-wallet-button",
+      "targets": [
+        ["css=shop-pay-wallet-button", "css:finder"],
+        ["xpath=//form[@id='product-form-quickadd-template--23645756621139__main']/div/div/shopify-accelerated-checkout/shop-pay-wallet-button", "xpath:idRelative"],
+        ["xpath=//shop-pay-wallet-button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "518137df-a280-44fc-9238-4627b83e2e2d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["be2d6bdc-1941-4b8e-aaa8-e67a1947c0bb"]
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
