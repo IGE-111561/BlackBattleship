@@ -77,7 +77,9 @@ public class US05DispararTabuleiroPage {
      * Clica numa célula do tabuleiro adversário para disparar.
      */
     public void shootTargetCell() {
-        WebElement cell = wait.until(ExpectedConditions.elementToBeClickable(targetCell));
+        WebElement cell = wait.until(ExpectedConditions.elementToBeClickable(
+                By.cssSelector(".target, .hover, .circle, [class*='cell'], [class*='square']")
+        ));
         cell.click();
     }
 

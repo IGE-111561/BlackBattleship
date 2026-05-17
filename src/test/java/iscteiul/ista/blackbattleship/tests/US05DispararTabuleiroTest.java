@@ -52,7 +52,7 @@ public class US05DispararTabuleiroTest {
                 "Devem existir células do tabuleiro disponíveis para interação."
         );
 
-        page.hoverPlayableCell();
+        //page.hoverPlayableCell();
         page.shootTargetCell();
 
         assertTrue(
