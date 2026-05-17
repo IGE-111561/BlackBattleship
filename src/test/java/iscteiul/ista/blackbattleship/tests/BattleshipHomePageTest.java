@@ -118,15 +118,8 @@ public class BattleshipHomePageTest {
                 "Após submeter nickname, o jogador deve estar na sala de jogo contra 'Paper Man'");
     }
 
-    /**
-     * US07 — Jogar contra um amigo via link partilhável.
-     *
-     * <p>Verifica o fluxo: clicar em "Play with a friend" abre o diálogo
-     * de nickname; após submissão, é apresentada a página com a mensagem
-     * "Share this link with a friend" e um link único da forma
-     * {@code https://papergames.io/en/r/...} pronto a ser partilhado
-     * com outro jogador.</p>
-     */
+
+    // US07 - Jogar contra um amigo via link partilhável
     @Test
     public void jogarContraAmigoComLinkPartilhavel() {
         homePage.acceptCookiesIfPresent();
@@ -144,4 +137,5 @@ public class BattleshipHomePageTest {
         assertTrue(shareableLink.startsWith("https://papergames.io/en/r/"),
                 "O link partilhável deve estar visível e começar por 'https://papergames.io/en/r/'. Link obtido: " + shareableLink);
     }
+
 }
