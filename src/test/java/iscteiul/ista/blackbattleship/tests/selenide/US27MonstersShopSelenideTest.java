@@ -1,4 +1,4 @@
-package iscteiul.ista.blackbattleship.tests;
+package iscteiul.ista.blackbattleship.tests.selenide;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.AfterEach;
