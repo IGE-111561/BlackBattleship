@@ -1,0 +1,398 @@
+{
+  "id": "7f0a5d1b-5500-47e2-ac00-b1836503b6d6",
+  "version": "2.0",
+  "name": "TestSuite_123762",
+  "url": "https://papergames.io/en/battleship",
+  "tests": [{
+    "id": "bcba9cd4-860f-4b45-b425-1b070fd2ce66",
+    "name": "US 19 - Changelog",
+    "commands": [{
+      "id": "56197155-93bb-4e0e-b9cc-1bd9427758b8",
+      "comment": "",
+      "command": "open",
+      "target": "/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae97c376-606b-4afd-8c55-f8a606af0ee3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1254x812",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc7e3877-34ac-4a58-bbce-8b72c80c8387",
+      "comment": "Carregar no menu Changelog",
+      "command": "click",
+      "target": "linkText=Changelog",
+      "targets": [
+        ["linkText=Changelog", "linkText"],
+        ["css=.nav:nth-child(5) > .nav-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Changelog')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/en/changelog')]", "xpath:href"],
+        ["xpath=//ul[5]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Changelog')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4cec369f-13d2-4ba5-9064-b18fd312f1d5",
+    "name": "US 05 - Disparar tabuleiro",
+    "commands": [{
+      "id": "09975819-3c57-4d42-b511-b0a686961863",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c53cff1d-c796-4ea6-bc93-d091171efef9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "947x700",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21a9dfe7-eed3-486d-8872-32a407c15843",
+      "comment": "Escolher Jogo Batalha Naval",
+      "command": "click",
+      "target": "css=.game-item:nth-child(1) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Battleship']", "xpath:img"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb8af582-7b47-469a-ab07-bd8a48718db1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.fa-user-group",
+      "targets": [
+        ["css=.fa-user-group", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7513ae11-2635-46d0-ae81-37057c357254",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.fa-user-group",
+      "targets": [
+        ["css=.fa-user-group", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a284d327-0708-4ad8-94be-929d83800f0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-robot > path",
+      "targets": [
+        ["css=.fa-robot > path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "de5b1517-286a-4860-b4ee-b1bb1db82d30",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.w-100:nth-child(2) > .btn > .front",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn > .front", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "006d698a-38b2-4910-a1cf-fceb47d5d996",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.w-100:nth-child(2) > .btn > .front",
+      "targets": [
+        ["css=.w-100:nth-child(2) > .btn > .front", "css:finder"],
+        ["xpath=//app-juicy-button[2]/button/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c42ac9e8-7aa1-4d98-8c7d-ebea59390e3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e0e8f18-3a57-434f-87a7-ffebd4c31050",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecbe9ff5-1e70-4259-bfdb-2a0e7ed7778d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ff67c07-ba4d-46c1-975b-367589c19073",
+      "comment": "",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "faddb850-223d-48e3-89b6-8a6cde363611",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover > .circle",
+      "targets": [
+        ["css=.hover > .circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "340d3a14-3550-499d-a7b0-4d8a784cee26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6187b168-dbb9-486f-988e-1a311a9122f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover > .circle",
+      "targets": [
+        ["css=.hover > .circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2c2457a-5620-4434-b98f-12cf456823fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebf120c5-2bf5-4ab8-8a12-44621e770472",
+      "comment": "",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "12a198d1-b521-4972-b707-10ca418a180c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover > .circle",
+      "targets": [
+        ["css=.hover > .circle", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "00afd53c-7d1a-4e77-b104-4469b3e11230",
+      "comment": "",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f95d02a8-1bfb-4fb0-94ac-b63de878fad3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e287f543-52f3-4e15-bb13-06d1a1844d0e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ff59a19-a849-41e3-91a9-ba74c3a90648",
+      "comment": "",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "22fd1917-d98d-4542-af3b-204ad5a592aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dcb8092-ce14-43da-ae17-1bc028c011bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "99aaa420-484c-4711-b68d-56f527c256f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d587e82-f3f0-4d03-8b3f-489b70bca587",
+      "comment": "",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9b630d1-4b06-4b09-bfc0-f37dfcdca3ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover",
+      "targets": [
+        ["css=.hover", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f76da481-e694-43d4-b119-6e74020a359e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.target",
+      "targets": [
+        ["css=.target", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "67cbaec1-3680-4373-87c7-7fdacd622345",
+    "name": "US20 - Privacidade Termos e Condições",
+    "commands": [{
+      "id": "47d61a7d-818f-4347-8f82-d9aee2f6038e",
+      "comment": "",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "078f2a27-70e7-499f-ac91-cdd1fade5ea2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "947x700",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f927d93-4532-48b6-84f1-41719443503f",
+      "comment": "Clicar em Terms & Conditions",
+      "command": "click",
+      "target": "linkText=Privacy",
+      "targets": [
+        ["linkText=Privacy", "linkText"],
+        ["css=.col-md-6:nth-child(3) > div:nth-child(6) > .text-reset", "css:finder"],
+        ["xpath=//a[contains(text(),'Privacy')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/en/blog/privacy-policy')]", "xpath:href"],
+        ["xpath=//div[3]/div[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Privacy')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "768af3f6-a435-41fd-999c-92329fe5141e",
+      "comment": "Fazer scroll",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "669b64e5-bc11-4c23-96d7-cf654d57e53b",
+      "comment": "Clicar em Privacy",
+      "command": "click",
+      "target": "linkText=Terms & conditions",
+      "targets": [
+        ["linkText=Terms & conditions", "linkText"],
+        ["css=.col-md-6:nth-child(3) > div:nth-child(7) > .text-reset", "css:finder"],
+        ["xpath=//a[contains(text(),'Terms & conditions')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/en/blog/terms-conditions')]", "xpath:href"],
+        ["xpath=//div[3]/div[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Terms & conditions')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7016a8e2-4e75-441e-a559-df260c91b25a",
+    "name": "US 27 - Consultar lista de Monsters na loja",
+    "commands": [{
+      "id": "d1ee9d04-1251-44af-b8ce-7da5b4a8eb48",
+      "comment": "",
+      "command": "open",
+      "target": "https://papergames.io/en/battleship",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc67741c-18a1-49cf-bb4e-ac729fa70e8c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1396x737",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e05686bc-9cae-4edc-80f4-62102805d991",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cdk-focused > .hide-if-collapsed",
+      "targets": [
+        ["css=.cdk-focused > .hide-if-collapsed", "css:finder"],
+        ["xpath=//li[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Shop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5886294-9620-4f02-a399-784559ce465d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.box-shadow-1:nth-child(2) .w-75",
+      "targets": [
+        ["css=.box-shadow-1:nth-child(2) .w-75", "css:finder"],
+        ["xpath=//img[@alt='Monsters']", "xpath:img"],
+        ["xpath=//div[2]/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3a0c7a59-24d5-4d4f-93a5-35e45f2d25b9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bcba9cd4-860f-4b45-b425-1b070fd2ce66"]
+  }],
+  "urls": ["https://papergames.io/", "https://papergames.io/en/battleship"],
+  "plugins": []
+}
