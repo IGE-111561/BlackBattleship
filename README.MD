@@ -1,3 +1,6 @@
+## Video Allure Report
+
+https://www.youtube.com/watch?v=Kln2B6WlMto
 
 ## Group Members
 
@@ -306,3 +309,22 @@ Backlog em formato de User Stories Scrum, ordenado por prioridade decrescente. A
 - Existe uma entrada visível para a Loja a partir do menu principal do site
 - A loja apresenta itens com preço e botão de compra claramente identificado
 - A página de merch é acessível a partir do site e abre o catálogo de produtos físicos
+
+
+
+## Execução dos testes iniciais - 123762
+A classe `MainPageTest` foi executada com sucesso na branch `BlackBattleship-123762`.
+
+
+## Execução dos testes iniciais - 93263
+
+A classe `MainPageTest` foi executada com sucesso na branch `BlackBattleship-93263`.
+
+Resultados:
+- search() ✔
+- toolsMenu() ✔
+- navigationToAllTools() ✔
+
+Total: 3 testes executados, 3 testes concluídos com sucesso.
+
+Nota: Foram apresentados avisos relativos à versão CDP do Chrome, mas não impediram a execução dos testes.

@@ -1,0 +1,99 @@
+{
+  "id": "d8383f5a-9001-4b17-9443-9891238e197e",
+  "version": "2.0",
+  "name": "U",
+  "url": "https://papergames.io",
+  "tests": [{
+    "id": "b123ac2d-d218-4678-9c27-54a75c39825e",
+    "name": "US18",
+    "commands": [{
+      "id": "55e4f06d-b6fd-45e0-9361-d32fd05a42f6",
+      "comment": "Abrir site",
+      "command": "open",
+      "target": "/pt-br/batalha-naval",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cc37437-10b7-47f7-a6f5-fb995785742b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1041x694",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12a017e2-b99d-4f15-a52a-78aad95c791f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=app-header-nav:nth-child(2) app-settings-menu .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=app-header-nav:nth-child(2) app-settings-menu .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//app-settings-menu/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8744ec32-c5d5-45c5-a33e-5f706dffce8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cdk-focused > .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=.cdk-focused > .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//app-settings-menu/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a901773-eebe-4a0c-ad6e-70901203e86d",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=app-header-nav:nth-child(2) app-settings-menu .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=app-header-nav:nth-child(2) app-settings-menu .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//app-settings-menu/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c478232-b182-43c1-9954-6a1db807a918",
+      "comment": "",
+      "command": "click",
+      "target": "css=#settings-dark-mode-button .mdc-switch__icons",
+      "targets": [
+        ["css=#settings-dark-mode-button .mdc-switch__icons", "css:finder"],
+        ["xpath=//button[@id='settings-dark-mode-button']/span[2]/span/span[3]", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-slide-toggle/div/button/span[2]/span/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0b3b5cd-e90e-43a5-bce3-1339f1c18cf3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.px-2",
+      "targets": [
+        ["css=.px-2", "css:finder"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-serverApp0']/div/div/app-settings-dialog/app-dialog-layout/div/section/div/div/div/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0469d468-5077-4c8d-a1ad-9062936e94e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cdk-focused > .mat-mdc-menu-item-text",
+      "targets": [
+        ["css=.cdk-focused > .mat-mdc-menu-item-text", "css:finder"],
+        ["xpath=//div[@id='mat-menu-panel-serverApp1']/div/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'English')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "dae92389-1996-4cf7-9add-656ba2534849",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b123ac2d-d218-4678-9c27-54a75c39825e"]
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
