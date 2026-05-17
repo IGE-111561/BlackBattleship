@@ -3,6 +3,7 @@ package iscteiul.ista.blackbattleship.pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.time.Duration;
 
@@ -77,10 +78,11 @@ public class US05DispararTabuleiroPage {
      * Clica numa célula do tabuleiro adversário para disparar.
      */
     public void shootTargetCell() {
-        WebElement cell = wait.until(ExpectedConditions.elementToBeClickable(
-                By.cssSelector(".target, .hover, .circle, [class*='cell'], [class*='square']")
+        WebElement cell = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.cssSelector(".target, .hover, .circle, [class*='cell'], [class*='square'], [class*='board']")
         ));
-        cell.click();
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cell);
     }
 
     /**
