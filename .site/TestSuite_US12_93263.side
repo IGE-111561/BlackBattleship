@@ -1,0 +1,122 @@
+{
+  "id": "33dc5fdd-1d91-4b99-808a-7759dcc4b76f",
+  "version": "2.0",
+  "name": "TestSuite_US12_93263.side",
+  "url": "https://papergames.io",
+  "tests": [{
+    "id": "700b70fc-6c12-495d-a910-349822724191",
+    "name": "TestSuite_US12_93263",
+    "commands": [{
+      "id": "af9c8c01-1f8f-4be5-a21b-b63d63dd7a4c",
+      "comment": "Abrir a página inicial do papergames.io no locale inglês",
+      "command": "open",
+      "target": "/en/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a459e400-991b-4724-8d9a-755304d28a2c",
+      "comment": "Definir o tamanho da janela para simular um ecrã de desktop (1215x1097)",
+      "command": "setWindowSize",
+      "target": "1215x1097",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b741c0a-3361-4d02-95e3-d0f5825cf959",
+      "comment": "Passar o rato sobre o 5.º item da grelha de jogos (interação de navegação)",
+      "command": "mouseOver",
+      "target": "css=.game-item:nth-child(5) .thumbnail",
+      "targets": [
+        ["css=.game-item:nth-child(5) .thumbnail", "css:finder"],
+        ["xpath=//div[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1a935cc-1c33-4f57-96e9-dc07be6425c5",
+      "comment": "Retirar o rato do 5.º item da grelha",
+      "command": "mouseOut",
+      "target": "css=.game-item:nth-child(5) .thumbnail",
+      "targets": [
+        ["css=.game-item:nth-child(5) .thumbnail", "css:finder"],
+        ["xpath=//div[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8a22680-2049-4392-b301-20faab6d35f0",
+      "comment": "Passar o rato sobre o item Connect4 (3.º jogo) na grelha",
+      "command": "mouseOver",
+      "target": "css=.game-item:nth-child(3) > a",
+      "targets": [
+        ["css=.game-item:nth-child(3) > a", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/connect4')])[2]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20ddbed3-f57d-4241-b425-40f2ca0f48b9",
+      "comment": "Retirar o rato do item Connect4",
+      "command": "mouseOut",
+      "target": "css=.game-item:nth-child(3) > a",
+      "targets": [
+        ["css=.game-item:nth-child(3) > a", "css:finder"],
+        ["xpath=(//a[contains(@href, '/en/connect4')])[2]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e42420d-cb83-47ea-bbaf-9c940168948c",
+      "comment": "Clicar na imagem do Battleship (1.º item da grelha) para aceder à página do jogo",
+      "command": "click",
+      "target": "css=.game-item:nth-child(1) .img-fluid",
+      "targets": [
+        ["css=.game-item:nth-child(1) .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Battleship']", "xpath:img"],
+        ["xpath=//a/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a50adc3-2536-4d6a-9390-466cd1bb4e6e",
+      "comment": "Clicar em 'See all' na secção de leaderboard da página do Battleship para ver o ranking completo",
+      "command": "click",
+      "target": "linkText=See all",
+      "targets": [
+        ["linkText=See all", "linkText"],
+        ["css=.w-100 > .text-end > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'See all')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/en/t/zPiTEEyUl')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'See all')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ea79626-ec73-44f9-ab9c-a41f654107ca",
+      "comment": "Passar o rato sobre o botão de settings na barra de navegação (exploração da UI)",
+      "command": "mouseOver",
+      "target": "css=app-settings-menu:nth-child(1) .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=app-settings-menu:nth-child(1) .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//app-settings-menu/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50b2ac1f-b1ff-428e-8dbe-a3848175c0af",
+      "comment": "Retirar o rato do botão de settings",
+      "command": "mouseOut",
+      "target": "css=app-settings-menu:nth-child(1) .mat-mdc-button-touch-target",
+      "targets": [
+        ["css=app-settings-menu:nth-child(1) .mat-mdc-button-touch-target", "css:finder"],
+        ["xpath=//app-settings-menu/button/span[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "518137df-a280-44fc-9238-4627b83e2e2d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["700b70fc-6c12-495d-a910-349822724191"]
+  }],
+  "urls": ["https://papergames.io/"],
+  "plugins": []
+}
