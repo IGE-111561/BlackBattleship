@@ -1,3 +1,6 @@
+## Video Allure Report
+
+https://www.youtube.com/watch?v=Kln2B6WlMto
 
 ## Group Members
 
