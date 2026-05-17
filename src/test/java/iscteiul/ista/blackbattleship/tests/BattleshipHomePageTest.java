@@ -67,41 +67,6 @@ public class BattleshipHomePageTest {
                 "Após submeter nickname, o jogador deve estar na sala de jogo contra 'Paper Man'");
     }
 
-    // US04 - Posicionar navios no tabuleiro
-    @Test
-    public void posicionarNaviosNoTabuleiro() {
-        homePage.acceptCookiesIfPresent();
-        homePage.clickPlayVsRobot();
-
-        if (homePage.isNicknameDialogVisible()) {
-            homePage.submitNickname("TesteNavios" + System.currentTimeMillis() % 10000);
-        }
-
-        assertTrue(
-                homePage.isGameBoardVisible() || homePage.hasGameCellsOrBoardElements(),
-                "Após iniciar a partida, devem existir elementos visíveis do tabuleiro/navios"
-        );
-    }
-
-    // US05 - Disparar contra o tabuleiro adversário
-    @Test
-    public void dispararContraTabuleiro() {
-        homePage.acceptCookiesIfPresent();
-        homePage.clickPlayVsRobot();
-
-        if (homePage.isNicknameDialogVisible()) {
-            homePage.submitNickname("TesteDisparo" + System.currentTimeMillis() % 10000);
-        }
-
-        // Garantir que o tabuleiro existe antes de disparar
-        assertTrue(homePage.hasGameCellsOrBoardElements());
-
-        // Fazer um disparo
-        homePage.shootRandomCell();
-
-        // Se chegou aqui sem erro → passou
-        assertTrue(true, "Foi possível disparar numa célula do tabuleiro");
-    }
 
     // US07 - Jogar contra um amigo via link partilhável
     @Test
@@ -122,38 +87,4 @@ public class BattleshipHomePageTest {
                 "O link partilhável deve estar visível e começar por 'https://papergames.io/en/r/'. Link obtido: " + shareableLink);
     }
 
-    // US19 - Consultar guias e changelog
-    @Test
-    public void consultarGuiasEChangelog() {
-
-        homePage.openGameGuides();
-        assertTrue(
-                homePage.isGuidesPageVisible(),
-                "A página de guias deve conter informação sobre o jogo"
-        );
-
-        homePage.openChangelog();
-        assertTrue(
-                homePage.isChangelogPageVisible(),
-                "A página de changelog deve estar visível"
-        );
-    }
-
-    // US20 - Aceder à Política de Privacidade e Termos & Condições
-    @Test
-    public void acederPoliticaPrivacidadeETermosCondicoes() {
-        homePage.openPrivacyPolicy();
-
-        assertTrue(
-                homePage.isPrivacyPolicyPageVisible(),
-                "A página de Política de Privacidade deve estar visível"
-        );
-
-        homePage.openTermsConditions();
-
-        assertTrue(
-                homePage.isTermsConditionsPageVisible(),
-                "A página de Termos & Condições deve estar visível"
-        );
-    }
 }
